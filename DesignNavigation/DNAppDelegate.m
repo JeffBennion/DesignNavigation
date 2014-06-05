@@ -13,6 +13,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UINavigationBar appearanceWhenContainedIn:[UIView class], nil] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Arial" size:10],
+        NSForegroundColorAttributeName : [UIColor yellowColor]}];
+    [[UINavigationBar appearanceWhenContainedIn:[UIView class], nil] setBarTintColor:[UIColor redColor]];
+    
+    [[UIToolbar appearanceWhenContainedIn:[UIView class], nil] setBarTintColor:[UIColor blueColor]];
+    
+    [[UIBarButtonItem appearanceWhenContainedIn:[UIToolbar class], nil] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Arial" size:100]} forState:UIControlStateNormal];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[DNPlaygroundViewController new]];

@@ -26,6 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(20, 50, 100, 30)];
+    
+    label.text = @"Dev Mountain";
+    
     // Do any additional setup after loading the view from its nib.
 }
 
